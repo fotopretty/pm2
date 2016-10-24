@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "outDir": "/Users/mac/Desktop/ionicspace/pm2/.tmp"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "include": [
+    "/Users/mac/Desktop/ionicspace/pm2/src/app/main.dev.ts",
+    "/Users/mac/Desktop/ionicspace/pm2/src/**/*.d.ts"
+  ]
+}

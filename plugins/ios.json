@@ -1,0 +1,40 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.fotopretty.pmt"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.fotopretty.pmt"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.fotopretty.pmt"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "1023450592682",
+            "PACKAGE_NAME": "com.fotopretty.pmt"
+        }
+    },
+    "dependent_plugins": {}
+}

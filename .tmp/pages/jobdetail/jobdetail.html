@@ -1,0 +1,56 @@
+<ion-content>
+  <ion-refresher   (ionRefresh)="doRefresh($event)"  >
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+      refreshingicon="refresher-pulling-icon">
+    </ion-refresher-content>
+  </ion-refresher>
+<ion-content class="jobdetail">
+  <ion-card>
+    <ion-card-content>
+      <ion-grid *ngFor="let item of items;">
+        <ion-row>
+          <ion-col width-33>Job no.</ion-col>
+          <ion-col>{{item.j_id}}</ion-col><ion-col>ต้องการ {{item.j_type}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>หัวข้องาน</ion-col>
+          <ion-col>{{item.j_title}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>ทำงานวันที่</ion-col>
+          <ion-col>{{item.j_workdate}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>รายละเอียด</ion-col>
+          <ion-col><span style="white-space:pre-line;">{{item.j_desc}}</span></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>ค่าจ้าง</ion-col>
+          <ion-col>{{item.j_cost}} บาท</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>ผู้ประกาศ</ion-col>
+          <ion-col>{{item.j_name}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>ชื่อเล่น</ion-col>
+          <ion-col>{{item.j_nickname}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>เบอร์ติดต่อ</ion-col>
+          <ion-col>{{item.j_tel}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-33>LINE</ion-col>
+          <ion-col><a href="http://line.me/ti/p/~{{item.j_line}}">{{item.j_line}}</a></ion-col>
+        </ion-row>
+
+
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
