@@ -1,0 +1,28 @@
+<ion-content class="home">
+  <ion-refresher   (ionRefresh)="doRefresh($event)"  >
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+      refreshingicon="refresher-pulling-icon">
+    </ion-refresher-content>
+  </ion-refresher>
+<ion-fab right middle>
+  <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+  <ion-fab-list side="top">
+    <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+    <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+    <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+    <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+  </ion-fab-list>
+</ion-fab>
+  <a href="http://line.me/ti/p/~prettymcthailand"><img src="assets/images/coverhead.png" width="100%"></a>
+
+  <div class="jobhomehead">
+    <div *ngFor="let item of items;" (click)="goToJobdetail($events,item)"><img src="assets/images/new.gif"> {{item.j_type}} {{item.j_title}}</div>
+    <div class="toAll" (click)="goToJoball()">ดูทั้งหมด >>></div>
+
+  </div>
+  <img src="assets/images/button-urgent.png" (click)="launch()">
+</ion-content>

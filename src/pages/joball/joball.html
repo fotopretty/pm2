@@ -1,0 +1,27 @@
+<ion-content class="job-all">
+  <ion-refresher   (ionRefresh)="doRefresh($event)"  >
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+      refreshingicon="refresher-pulling-icon">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="joballhead">
+    <img src="assets/images/bar-today.png">
+    <div class="jobhome" *ngFor="let item of itemstoday; " (click)="goToJobdetail($events,item)"><img src="assets/images/new.gif"> {{item.j_type}} {{item.j_title}}</div>
+  </div>
+  <div class="joballhead2">
+    <img src="assets/images/bar-job.png">
+    <div class="jobhome" *ngFor="let item of items; " (click)="goToJobdetail($events,item)"><ion-icon name="arrow-dropright"></ion-icon>
+      <span [ngSwitch]="item.j_type">
+        <span *ngSwitchCase="'pretty'">PT</span>
+        <span *ngSwitchCase="'mc'">MC</span>
+        <span *ngSwitchCase="'smartboy'">SB</span>
+        <span *ngSwitchCase="'model'">MD</span>
+        <span *ngSwitchCase="'actor'">AC</span>
+      </span> {{item.j_title}}</div>
+  </div>
+</ion-content>
